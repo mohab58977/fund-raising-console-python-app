@@ -11,7 +11,7 @@
 
 """
 from register import register
-#from login import login
+from login import login
 
 
 
@@ -20,11 +20,9 @@ def mainmenu():
         print("---fund raising App -----")
         choice= input("1)login \n2)register \n3)exit \n")
         if choice =="1":
-          #  login()
-          print(1)
+            login()
         elif choice =="2":
-          #  register()
-          print(1)
+            register()
         elif choice =="3":
             return 0
         else:

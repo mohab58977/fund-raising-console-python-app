@@ -50,4 +50,4 @@ def search_project_by_id(projectid):
         return False
 
 
-delete("ads@gm.com")
+#delete("ads@gm.com")

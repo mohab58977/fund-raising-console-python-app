@@ -1,5 +1,5 @@
 from create import path, project, checkdate, checktarget, getdetails, getenddate, getstartdate, generate_new_id, gettitle, gettarget
-from myapp.projmenu import projmenu
+from projmenu import projmenu
 
 from viewall import viewall
 
@@ -58,4 +58,4 @@ def update(mail):
     return data
 
 
-edit("ads@gm.com")
+#edit("ads@gm.com")

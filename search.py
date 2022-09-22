@@ -20,4 +20,4 @@ def search(mail):
     projmenu(mail)
 
 
-search("a")
+#search("a")
