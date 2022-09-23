@@ -36,9 +36,10 @@ def search_project_by_id(projectid):
     allprojects = viewall()
     for project in allprojects:
         myproject = project.split(":")
-        # print(myproject[4])
-        # input("enter")
-        if myproject[5] == str(projectid):
+        print(myproject[5])
+        input("enter")
+        if myproject[5] == projectid:
+
             project_index = allprojects.index(project)
             print(f"project found at index {project_index} , ")
             return True, project_index

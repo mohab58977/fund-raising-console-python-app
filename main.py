@@ -6,6 +6,7 @@ def mainmenu():
         print("---fund raising App -----")
         choice = input("1)login \n2)register \n3)exit \n")
         if choice == "1":
+            
             login()
         elif choice == "2":
             register()

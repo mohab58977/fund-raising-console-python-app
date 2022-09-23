@@ -1,6 +1,5 @@
 
-import fileinput
-from curses.ascii import isdigit
+
 from datetime import datetime
 import time
 import re
@@ -78,7 +77,7 @@ def gettarget():
 
 def checktarget(num):
     for i in num:
-        if not (isdigit(i)):
+        if not (i.isdigit()):
             return False
 
     return num
