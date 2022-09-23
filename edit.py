@@ -1,5 +1,4 @@
 from create import path, project, checkdate, checktarget, getdetails, getenddate, getstartdate, generate_new_id, gettitle, gettarget
-from projmenu import projmenu
 
 from viewall import viewall
 
@@ -10,7 +9,7 @@ def edit(mail):
     filedata = viewall()
     for line in filedata:
         lin = line.split(":")
-        if data == lin[4] and lin[5] == str(mail):
+        if data == lin[5] and lin[6] == str(mail):
             print("----------enter new data-----------")
             newline = update(mail)
             fileda = '\n'.join(filedata)
@@ -20,10 +19,10 @@ def edit(mail):
                 file.write(allprojects)
                 print(allprojects.split('\n'))
                 input("enter to menu")
-                return projmenu(mail)
+                return True
+
     print("id not found or you are not authorized")
     input("enter to menu")
-    return projmenu(mail)
 
 
 def update(mail):
@@ -58,4 +57,4 @@ def update(mail):
     return data
 
 
-#edit("ads@gm.com")
+# edit("ads@gm.com")

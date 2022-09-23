@@ -1,8 +1,7 @@
-from projmenu import projmenu
 from viewall import viewall
 
 
-def search(mail):
+def search():
     date = input(
         "please enter start date of project formated as yyyy-mm-dd:\n")
     found = []
@@ -17,7 +16,7 @@ def search(mail):
             found.insert(0, project)
     print(found)
     input("enter to menu")
-    projmenu(mail)
+    
 
 
 #search("a")

@@ -69,13 +69,14 @@ def getpasswordagain():
 def passwordmatch(val1, val2):
     return val1 == val2
 
+
 def read_data(filepath):
     with open(filepath, 'r') as file:
         return file.read()
 
 
 def is_valid_email(mail):
-    lines = read_data(f"{path}/users")
+    lines = read_data(f"{path}/users.txt")
     linesplit = lines.split('\n')
     for line in linesplit:
         if line.find(mail) != -1:
@@ -86,7 +87,7 @@ def is_valid_email(mail):
 def is_valid_phone(phone):
     return re.fullmatch(PHONE_REG, phone)
 
-    
+
 def add_data(filepath, data):
     with open(filepath, 'a') as file:
         for key, value in data.items():

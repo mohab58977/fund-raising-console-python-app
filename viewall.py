@@ -14,9 +14,6 @@ def viewall():
         for project in projects:
             mypro = project.strip("\n")
             list.append(mypro)
-        #print(list)
-
+        print(list)
+        input("enter to continue")
         return list
-
-
-

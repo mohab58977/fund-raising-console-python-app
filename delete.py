@@ -1,8 +1,5 @@
 
 import os
-from projmenu import projmenu
-
-
 from viewall import viewall
 path = os.path.dirname(os.path.abspath(__file__))
 
@@ -18,15 +15,15 @@ def delete(mail):
         proj = allprojects[project_index].split(":")
         # print(proj[5])
         # input("space")
-        if proj[5] == mail:
+        if proj[6] == mail:
             del allprojects[project_index]
             all = '\n'.join(allprojects)
             afterdelete = write_book_list_to_the_file(all)
             print(afterdelete.split('\n'))
             input("enter to menu")
-            projmenu(mail)
         else:
             print("not authorized")
+            input("enter to menu")
 
 
 def write_book_list_to_the_file(allprojects):
@@ -41,13 +38,17 @@ def search_project_by_id(projectid):
         myproject = project.split(":")
         # print(myproject[4])
         # input("enter")
-        if myproject[4] == str(projectid):
+        if myproject[5] == str(projectid):
             project_index = allprojects.index(project)
             print(f"project found at index {project_index} , ")
             return True, project_index
+            input("enter to menu")
+
     else:
         print("book not found ")
+        input("enter to menu")
+
         return False
 
 
-#delete("ads@gm.com")
+# delete("ads@gm.com")

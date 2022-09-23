@@ -1,4 +1,5 @@
-from projmenu import projmenu
+
+import fileinput
 from curses.ascii import isdigit
 from datetime import datetime
 import time
@@ -16,7 +17,7 @@ DATE_REG = re.compile(
 project = {"title": "", "start": "", "end": "",
            "target": "", "id": "", "owner": ""}
 
-import fileinput
+
 def create(mail):
     print("----------create project------------")
     project["id"] = generate_new_id()
@@ -48,7 +49,6 @@ def create(mail):
     data = ":".join(proj)
     write_project_to_the_file(data)
     input("successful \n press enter to menu")
-    projmenu(mail)
 
 
 def generate_new_id():
@@ -108,4 +108,4 @@ def write_project_to_the_file(project):
         return False
 
 
-#create("ads@gm.com")
+# create("ads@gm.com")
